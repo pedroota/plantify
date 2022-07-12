@@ -1,5 +1,7 @@
 import {
-  ArrowRight
+  ArrowRight,
+  Phone,
+  Mail
 } from "react-feather";
 
 import { Header } from "@/components/Header";
@@ -73,6 +75,23 @@ export const Home: React.FC = () => {
             <img src={standOne} alt="" />
             <img src={standTwo} alt="" />
             <img src={standThree} alt="" />
+          </div>
+        </div>
+      </section>
+
+      <section className="shipping-service">
+        <div className="limiter-space">
+          <div className="shipping-service__content">
+            <p className="content__title">Free Shipping Services</p>
+            <p className="content__description">*only for the same region</p>
+            <div className="content__phone">
+              <Phone />
+              +62 1189-2719-00
+            </div>
+            <div className="content__mail">
+              <Mail />
+              order@platify.co
+            </div>
           </div>
         </div>
       </section>

@@ -1,0 +1,33 @@
+@import "../mixins/core";
+
+.shipping-service {
+  margin-top: 160px;
+  margin-bottom: 200px;
+
+  &__content {
+    @include cover("../../assets/banners/banner-shipping.png");
+    width: 100%;
+    height: 346px;
+    padding: 50px 30px;
+    display: flex;
+    flex-direction: column;
+    font-family: "DM Sans", sans-serif;
+    color: $brown;
+    letter-spacing: 0.3px;
+
+    .content__title {
+      font-size: 44px;
+    }
+
+    .content__description {
+      font-size: 17px;
+      margin-bottom: 80px;
+    }
+
+    .content__phone, .content__mail {
+      display: flex;
+      align-items: center;
+      @include margin-y(5px);
+    }
+  }
+}
