@@ -1,0 +1,40 @@
+@import "../mixins/core";
+
+.arrivals {
+  
+  > .limiter-space {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__header {
+    @include flex-justify-align(space-between, center);
+    @include margin-y(50px);
+    width: 100%;
+    color: $primary-green;
+    font-family: "DM Sans", sans-serif;
+    
+    .header__title {
+      font-size: 30px;
+    }
+
+    .header__view-all {
+      font-size: 16;
+      cursor: pointer;
+    }
+  }
+
+  &__content {
+    @include flex-justify-align(space-between, center);
+    margin-bottom: 30px;
+    gap: 10px 10px;
+    width: 100%;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: $md) {
+      & {
+        justify-content: center;
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+@import "../mixins/core";
+
+.search {
+  width: 100%;
+  display: flex;
+
+  &__option, &__button-search {
+    @include padding-x-y(10px, 10px);
+    @include flex-center();
+    cursor: pointer;
+  }
+
+  &__option {
+    border: 1px solid $primary-green;
+    color: $primary-green;
+  }
+
+  &__button-search {
+    background-color: $primary-green;
+    color: $white;
+  }
+
+  &__bar {
+    @include margin-x(10px);
+    width: 100%;
+    padding-left: 10px;
+    &::placeholder {
+      color: $primary-green;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+@import "../mixins/button";
+@import "../mixins/core";
+
+.button {
+  @include remove-button-appearance();
+  @include padding-x-y(25px, 15px);
+  background-color: $white;
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  color: $primary-green;
+
+  &--explore {
+    color: $white;
+    background-color: transparent;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+
+    svg {
+      margin-left: 5px;
+    }
+  }
+
+  &__read-more {
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 12px;
+    display: none;
+  }
+
+  &__read-more--show {
+    display: block;
+  }
+}

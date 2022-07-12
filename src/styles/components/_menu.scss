@@ -1,0 +1,14 @@
+.ul {
+  display: flex;
+
+  &__list-item {
+    font-family: 'DM Sans', sans-serif;
+    > a {
+      color: $white;
+    }
+  }
+
+  &__list-item + &__list-item{
+    margin-left: 20px;
+  }
+}

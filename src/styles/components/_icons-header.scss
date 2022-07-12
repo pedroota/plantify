@@ -1,0 +1,10 @@
+.icons-header {
+  &__icon {
+    cursor: pointer;
+    color: $white;
+  }
+
+  &__icon + &__icon {
+    margin-left: 15px;
+  }
+}

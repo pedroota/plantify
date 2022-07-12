@@ -1,0 +1,15 @@
+@import "../mixins/core";
+
+.header {
+  background-color: $primary-green;
+}
+
+@media screen and (max-width: $md) {
+  .header {
+    @include padding-y(25px);
+  }
+
+  .logo {
+    display: none;
+  }
+}

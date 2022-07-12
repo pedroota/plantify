@@ -1,0 +1,9 @@
+@import "../mixins/core";
+
+.limiter-space {
+  width: 100%;
+  max-width: 1440px;
+  @include margin-x(auto);
+  @include flex-justify-align(space-between, center);
+  @include padding-x(20px);
+}

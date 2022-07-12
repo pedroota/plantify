@@ -1,0 +1,10 @@
+@import "../mixins/core";
+
+.search-flower {
+  @include padding-y(50px);
+  background-color: $light-green;
+  
+  > .limiter-space {
+    @include flex-justify-align(center, center);
+  }
+}
