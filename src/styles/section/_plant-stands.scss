@@ -1,41 +1,35 @@
 @import "../mixins/core";
 
-.arrivals {
-  
+.plant-stands {
+  background-color: $light-green;
+  position: relative;
+
   > .limiter-space {
     display: flex;
     flex-direction: column;
   }
-
+  
   &__header {
-    @include flex-justify-align(space-between, center);
-    @include margin-y(50px);
     width: 100%;
     color: $primary-green;
     font-family: "DM Sans", sans-serif;
-    letter-spacing: 0.3px;
-    
-    .header__title {
-      font-size: 30px;
-    }
+    margin-top: 80px;
+    margin-bottom: 40px;
 
-    .header__view-all {
-      font-size: 16;
-      cursor: pointer;
+    .header__title {
+      font-size: 40px;
+      letter-spacing: 0.5px;
     }
   }
 
   &__content {
-    @include flex-justify-align(space-between, center);
-    margin-bottom: 80px;
-    gap: 10px 10px;
     width: 100%;
+    @include flex-justify-align(space-between, center);
+    gap: 10px 10px;
     flex-wrap: wrap;
 
     @media screen and (max-width: $md) {
-      & {
-        justify-content: center;
-      }
+      justify-content: center;
     }
   }
 }

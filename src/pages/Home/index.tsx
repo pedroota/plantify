@@ -11,6 +11,9 @@ import arrivalOne from "@/assets/arrivals/arrival-one.png";
 import arrivalTwo from "@/assets/arrivals/arrival-two.png";
 import arrivalThree from "@/assets/arrivals/arrival-three.png";
 import arrivalFour from "@/assets/arrivals/arrival-four.png";
+import standOne from "@/assets/plant-stands/stand-one.png";
+import standTwo from "@/assets/plant-stands/stand-two.png";
+import standThree from "@/assets/plant-stands/stand-three.png";
 
 export const Home: React.FC = () => {
   return (
@@ -56,6 +59,20 @@ export const Home: React.FC = () => {
             <img src={arrivalTwo} alt="" />
             <img src={arrivalThree} alt="" />
             <img src={arrivalFour} alt="" />
+          </div>
+        </div>
+      </section>
+
+      <section className="plant-stands">
+        <div className="limiter-space">
+          <div className="plant-stands__header">
+            <p className="header__title">Plant stands</p>
+          </div>
+
+          <div className="plant-stands__content">
+            <img src={standOne} alt="" />
+            <img src={standTwo} alt="" />
+            <img src={standThree} alt="" />
           </div>
         </div>
       </section>
