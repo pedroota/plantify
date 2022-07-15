@@ -95,6 +95,22 @@ export const Home: React.FC = () => {
           </div>
         </div>
       </section>
+
+
+      <section className="maps-location">
+        <div className="limiter-space">
+          <div className="maps-location__content">
+            <h4 className="content__visit-us">Visit Us</h4>
+            <p>
+              Gekikara Street 16, Atalanta <br />
+              1327 Block M <br />
+              Mardial, Sigure <br />
+              T2G 0T2
+            </p>
+            <button className="button button--green">Get Directions</button>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
