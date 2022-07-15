@@ -1,8 +1,13 @@
+import { useEffect } from "react";
 import {
   ArrowRight,
   Phone,
   Mail
 } from "react-feather";
+
+// Swiper Lib
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/scss';
 
 import { Header } from "@/components/Header";
 import { ProductsHero } from "@/components/ProductsHero";
@@ -13,11 +18,23 @@ import arrivalOne from "@/assets/arrivals/arrival-one.png";
 import arrivalTwo from "@/assets/arrivals/arrival-two.png";
 import arrivalThree from "@/assets/arrivals/arrival-three.png";
 import arrivalFour from "@/assets/arrivals/arrival-four.png";
+
 import standOne from "@/assets/plant-stands/stand-one.png";
 import standTwo from "@/assets/plant-stands/stand-two.png";
 import standThree from "@/assets/plant-stands/stand-three.png";
 
+import productImage from "@/assets/products/product-one.png";
+
+// Products
+import { products } from "@/data/products";
+import { Product } from "@/components/Product";
+
 export const Home: React.FC = () => {
+
+  useEffect(() => {
+    products && products.map((product, index) => {console.log(`produto ${index}`, product)})
+  }, [])
+
   return (
     <>
       <Header />
@@ -40,6 +57,29 @@ export const Home: React.FC = () => {
             <ProductsHero className="product-one" />
             <ProductsHero className="product-two" />
             <ProductsHero className="product-three" />
+          </div>
+        </div>
+      </section>
+
+      <section className="featured-products">
+        <div className="limiter-space">
+          <div className="featured-products__header">
+            <p>Featured</p>
+          </div>
+
+          <div className="featured-products__products">
+            <Swiper
+              spaceBetween={20}
+              slidesPerView={3.5}
+            >
+              {products && products.map((product, index) => {
+                return (
+                  <SwiperSlide key={index}>
+                    <Product id={product.id} name={product.name} price={product.price} image={<img src={productImage} alt=""/>}/> {/** Eu sei que isso é errado (Passar um elemento como prop) */}
+                  </SwiperSlide>
+                )
+              })}
+            </Swiper>
           </div>
         </div>
       </section>

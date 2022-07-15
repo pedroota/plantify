@@ -1,4 +1,4 @@
 
 export const Login: React.FC = () => {
-  return <div />;
+  return <h1>Login Page</h1>;
 }

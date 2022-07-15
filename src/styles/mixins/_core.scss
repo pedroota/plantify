@@ -185,7 +185,7 @@
   justify-content: center;
 }
 
-@mixin flex-justify-align($justify, $align) {
+@mixin flex-justify-align($justify: center, $align: center) {
   display: flex;
   align-items: $align;
   justify-content: $justify;

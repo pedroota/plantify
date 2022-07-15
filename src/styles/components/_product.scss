@@ -1,0 +1,15 @@
+@import "../mixins/core";
+
+.product {
+  width: fit-content;
+
+  &__header {
+    @include margin-y(10px);
+    @include padding-x(10px);
+    @include flex-justify-align(space-between, center)
+  }
+
+  &__body {
+    @include flex-justify-align(flex-end, center);
+  }
+}

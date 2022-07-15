@@ -1,0 +1,24 @@
+@import "../mixins/core";
+
+.featured-products {
+  font-family: "DM Sans", sans-serif;
+  @include margin-y(70px);
+
+  > .limiter-space {
+    @include flex-justify-align(center, flex-start);
+    flex-direction: column;
+  }
+
+  &__header {
+    > p {
+      color: $primary-green;
+      font-size: 40px;
+    }
+  }
+
+  &__products {
+    width: 100%;
+    margin-top: 50px;
+    cursor: grab;
+  }
+}
